@@ -1,0 +1,36 @@
+:root {
+  --primary: #229;
+  --primary-variant: rgba(50, 75, 90, 0.55);
+  --primary-shadow: #fff;
+  --secondary: #292;
+  --secondary-variant: rgba(100, 190, 150, 0.55);
+}
+
+body {
+  font-family: 'Mukta', sans-serif;
+}
+
+.header {
+  width: 60%;
+  margin: auto 20%;
+  padding: 2% 0%;
+  background-color: var(--primary-variant);
+  text-align: center;
+  color: var(--primary);
+  font-size: 28px;
+  line-height: 30px;
+  text-shadow: 1px 1px var(--primary-shadow);
+}
+
+.sub-header {
+  width: 50%;
+  margin: auto 25%;
+  padding: 1% 0%;
+  background-color: var(--secondary-variant);
+  text-align: center;
+  color: var(--secondary);
+  font-size: 22px;
+  line-height: 25px;
+  text-shadow: 1px 1px var(--primary-shadow);
+}
+

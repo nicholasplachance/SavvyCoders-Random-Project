@@ -1,37 +1,78 @@
 :root {
-  --primary: #80A1C1;
+  --primary: #00157F;
+  --primary-variant: #00072B;
   --primary-shadow: #111;
-  --secondary: #A77E58;
-  --third: #D9CFC1;
+  --secondary: #283333;
+  --secondary-variant: #566666;
+  --secondary-shadow: #fff;
+  --background: #7C9EB2;
+  --error: #b00020;
+  --primary-text: #fff;
+  --secondary-text: #111;
+  --base-spacing: 8px;
 
 }
 
 body {
   font-family: 'Mukta', sans-serif;
-  background: var(--primary);
+  background: var(--background);
 }
 
-.header {
-  width: 60%;
-  margin: auto 20%;
-  padding: 2% 0%;
-  background-color: var(--secondary);
+header {
+  width: 100%;
+  margin: 2.5% 0%;
+  background-color: var(--secondary-variant);
   text-align: center;
-  color: var(--third);
+  color: var(--primary);
   font-size: 28px;
-  line-height: 30px;
-  text-shadow: 1px 1px var(--primary-shadow);
+  line-height: 50px;
+  text-shadow: 2px 1.5px var(--primary-shadow);
 }
+
+
 
 .sub-header {
   width: 50%;
-  margin: auto 25%;
+  margin: 2.5% 25%;
   padding: 1% 0%;
   background-color: var(--secondary);
   text-align: center;
-  color: var(--third);
-  font-size: 22px;
-  line-height: 25px;
+  color: var(--primary-text);
+  font-size: calc(var(--base-spacing) * 3);
+  line-height: calc(var(--base-spacing) * 4);
   text-shadow: 1px 1px var(--primary-shadow);
 }
 
+nav {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid var(--secondary-variant);
+  width: 30%;
+  margin: auto 35%;
+}
+
+nav ul {
+  width: 100%;
+}
+
+nav li {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0px 5px;
+}
+
+nav a:link {
+  text-decoration: none;
+}
+
+section {
+  width: 80%;
+  margin: auto 10%;
+  background: var(--primary);
+  color: var(--primary-text);
+  text-shadow: 1px 1px var(--primary-shadow);
+}
+
+footer {
+  border-top: 5px solid var(--secondary-variant);
+}

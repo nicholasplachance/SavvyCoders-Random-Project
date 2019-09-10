@@ -12,6 +12,8 @@
   --base-spacing: 8px;
 }
 
+/* Body and general selectors */
+
 body {
   font-family: "Mukta", sans-serif;
   background: var(--background);
@@ -30,6 +32,12 @@ a:visited {
   text-shadow: 1px 1px var(--secondary-shadow);
   font-weight: 600;
 }
+
+ul{
+  padding: 0;
+}
+
+/* Header and logo style */
 
 header {
   width: 100%;
@@ -56,6 +64,35 @@ header > h1 {
   text-align: center;
 }
 
+/* Navigation style  */
+
+nav {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid var(--secondary-variant);
+  border-top: none;
+  align-items: flex-end;
+  align-content: flex-end;
+}
+
+nav ul {
+  list-style-type: none;
+
+}
+
+nav li {
+  display: inline-block;
+  padding: 0 calc(var(--base-spacing));
+}
+
+/* Main Section style */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .sub-header {
   width: 50%;
   margin: 2.5% 25%;
@@ -66,30 +103,6 @@ header > h1 {
   font-size: calc(var(--base-spacing) * 3);
   line-height: calc(var(--base-spacing) * 4);
   text-shadow: 1px 1px var(--primary-shadow);
-}
-
-nav {
-  display: flex;
-  flex-direction: column;
-  border: 3px solid var(--secondary-variant);
-  border-top: none;
-}
-
-nav ul {
-  flex-wrap: wrap;
-  width: 50%;
-}
-
-nav li {
-  display: inline-block;
-  text-decoration: none;
-  padding: 0 5px;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 section {
@@ -107,6 +120,8 @@ section p {
   text-align: center;
   width: 80%;
 }
+
+/* Footer style */
 
 footer {
   border-top: 5px solid var(--secondary-variant);

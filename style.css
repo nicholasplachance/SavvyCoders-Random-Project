@@ -13,6 +13,7 @@
 
 }
 
+
 body {
   font-family: 'Mukta', sans-serif;
   background: var(--background);
@@ -20,13 +21,18 @@ body {
 
 header {
   width: 100%;
-  margin: 2.5% 0%;
+  margin: 0%;
   background-color: var(--secondary-variant);
   text-align: center;
   color: var(--primary);
   font-size: 28px;
   line-height: 50px;
   text-shadow: 2px 1.5px var(--primary-shadow);
+}
+
+figure,
+h1 {
+  margin: 0;
 }
 
 
@@ -52,13 +58,13 @@ nav {
 }
 
 nav ul {
-  width: 100%;
+  width: auto;
 }
 
 nav li {
   display: inline-block;
   text-decoration: none;
-  padding: 0px 5px;
+  padding: 0px 2%;
 }
 
 nav a:link {

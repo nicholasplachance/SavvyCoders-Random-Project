@@ -20,7 +20,6 @@ body {
 }
 
 header {
-<<<<<<< HEAD
   width: 100%;
   margin: 2.5% 0%;
   background-color: var(--secondary-variant);
@@ -29,7 +28,6 @@ header {
   font-size: 28px;
   line-height: 50px;
   text-shadow: 2px 1.5px var(--primary-shadow);
-=======
   width: 100vw;
   margin: 0%;
   background-color: var(--secondary-variant);
@@ -52,7 +50,6 @@ header > h1 {
   line-height: 50px;
   text-shadow: 2px 1.5px var(--primary-shadow);
   text-align: center;
->>>>>>> layout
 }
 
 
@@ -73,42 +70,34 @@ nav {
   display: flex;
   flex-direction: column;
   border: 3px solid var(--secondary-variant);
-<<<<<<< HEAD
   width: 30%;
   margin: auto 35%;
 }
 
 nav ul {
   width: 100%;
-=======
   width: 100%;
 }
 
 nav ul {
   flex-wrap: wrap;
   width: 50%;
->>>>>>> layout
 }
 
 nav li {
   display: inline-block;
   text-decoration: none;
-<<<<<<< HEAD
   padding: 0px 5px;
-=======
   padding: 0px 2%;
->>>>>>> layout
 }
 
 nav a:link {
   text-decoration: none;
-<<<<<<< HEAD
 }
 
 section {
   width: 80%;
   margin: auto 10%;
-=======
   color: var(--primary-text);
   text-shadow: 1px 1px var(--primary-shadow);
 }
@@ -123,7 +112,6 @@ section {
   display: flex;
   flex-direction: column;
   width: 80%;
->>>>>>> layout
   background: var(--primary);
   color: var(--primary-text);
   text-shadow: 1px 1px var(--primary-shadow);
@@ -131,14 +119,11 @@ section {
   align-items: center;
 }
 
-<<<<<<< HEAD
-=======
 section p {
   text-align: center;
   width: 80%;
 }
 
->>>>>>> layout
 footer {
   border-top: 5px solid var(--secondary-variant);
 }

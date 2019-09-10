@@ -1,36 +1,40 @@
 :root {
-  --primary: #00157F;
-  --primary-variant: #00072B;
+  --primary: #00157f;
+  --primary-variant: #00072b;
   --primary-shadow: #111;
   --secondary: #283333;
   --secondary-variant: #566666;
   --secondary-shadow: #fff;
-  --background: #7C9EB2;
+  --background: #7c9eb2;
   --error: #b00020;
   --primary-text: #fff;
   --secondary-text: #111;
   --base-spacing: 8px;
-
 }
 
-
 body {
-  font-family: 'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
   background: var(--background);
+}
+
+a:link {
+  color: var(--secondary-text);
+  text-decoration: none;
+  text-shadow: 1px 1px var(--secondary-shadow);
+  font-weight: 600;
+}
+
+a:visited {
+  color: var(--secondary-text);
+  text-decoration: none;
+  text-shadow: 1px 1px var(--secondary-shadow);
+  font-weight: 600;
 }
 
 header {
   width: 100%;
-  margin: 2.5% 0%;
-  background-color: var(--secondary-variant);
-  text-align: center;
-  color: var(--primary);
-  font-size: 28px;
-  line-height: 50px;
-  text-shadow: 2px 1.5px var(--primary-shadow);
-  width: 100vw;
   margin: 0%;
-  background-color: var(--secondary-variant);
+  background: var(--secondary-variant);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,8 +56,6 @@ header > h1 {
   text-align: center;
 }
 
-
-
 .sub-header {
   width: 50%;
   margin: 2.5% 25%;
@@ -70,13 +72,7 @@ nav {
   display: flex;
   flex-direction: column;
   border: 3px solid var(--secondary-variant);
-  width: 30%;
-  margin: auto 35%;
-}
-
-nav ul {
-  width: 100%;
-  width: 100%;
+  border-top: none;
 }
 
 nav ul {
@@ -87,19 +83,7 @@ nav ul {
 nav li {
   display: inline-block;
   text-decoration: none;
-  padding: 0px 5px;
-  padding: 0px 2%;
-}
-
-nav a:link {
-  text-decoration: none;
-}
-
-section {
-  width: 80%;
-  margin: auto 10%;
-  color: var(--primary-text);
-  text-shadow: 1px 1px var(--primary-shadow);
+  padding: 0 5px;
 }
 
 main {

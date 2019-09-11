@@ -37,6 +37,11 @@ ul{
   padding: 0;
 }
 
+.fas {
+  font-size: 48px;
+  margin: var(--base-spacing);
+}
+
 /* Header and logo style */
 
 header {
@@ -67,12 +72,8 @@ header > h1 {
 /* Navigation style  */
 
 nav {
-  display: flex;
-  flex-direction: column;
   border: 3px solid var(--secondary-variant);
   border-top: none;
-  align-items: flex-end;
-  align-content: flex-end;
 }
 
 nav ul {
@@ -81,8 +82,8 @@ nav ul {
 }
 
 nav li {
-  display: inline-block;
-  padding: 0 calc(var(--base-spacing));
+  padding: var(--base-spacing);
+  text-align: center;
 }
 
 /* Main Section style */

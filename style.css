@@ -76,6 +76,7 @@ header > h1 {
 nav {
   border: 3px solid var(--secondary-variant);
   border-top: none;
+  min-height: 72px;
 }
 
 nav ul {
@@ -86,6 +87,12 @@ nav ul {
 nav li {
   padding: var(--base-spacing);
   text-align: center;
+}
+
+nav .is-hidden {
+  margin: 0;
+  height: 0px;
+  opacity: 0;
 }
 
 /* Main Section style */

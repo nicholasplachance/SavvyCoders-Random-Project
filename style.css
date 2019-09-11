@@ -97,6 +97,17 @@ nav .is-hidden {
 
 /* Main Section style */
 
+.hero-image {
+  background: url(https://picsum.photos/680/420) center center no-repeat;
+  background-size: cover;
+  height: 20vh;
+  max-height: 420px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 main {
   display: flex;
   flex-direction: column;

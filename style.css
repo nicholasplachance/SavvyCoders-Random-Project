@@ -79,7 +79,7 @@ nav ul {
 }
 
 nav li a {
-  font-size: 2.4em;
+  font-size: 1.6em;
   padding: var(--base-spacing);
   text-align: center;
   color: var(--secondary-text);
@@ -188,19 +188,49 @@ section p {
 
 footer {
   border-top: 3px solid var(--secondary-variant);
-  padding: (var(--base-spacing) * 4);
 }
 
 footer ul {
   display: flex;
   justify-content: space-around;
   padding: var(--base-spacing);
-  font-size: 2.4em;
+  font-size: 1.6em;
 }
 
 footer ul li a {
   color: var(--secondary-text);
   text-shadow: 1px 1px var(--secondary-shadow);
+}
+
+
+/* Contact Page */
+/* Form */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  margin: var(--base-spacing);
+}
+
+input,
+textarea {
+  border: solid thin var(--primary);
+  max-width: 80vw;
+}
+
+input[type="submit"] {
+  max-width: calc(var(--base-spacing) * 10);
+  text-align: center;
+  display: inline-block;
+  margin: var(--base-spacing);
+  margin-top: 0;
+  min-height: calc(var(--base-spacing) * 4);
+  max-width: calc(var(--base-spacing) * 12);
 }
 
 /* Media queries */

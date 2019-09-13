@@ -22,6 +22,7 @@ html,body {
   overflow-x: hidden;
   font-family: "Mukta", sans-serif;
   background: var(--background);
+  font-size: 10px;
 }
 
 a {
@@ -59,7 +60,7 @@ header > figure > img {
 
 header > h1 {
   color: var(--primary-text);
-  font-size: 28px;
+  font-size: 2.8em;
   line-height: 50px;
   text-shadow: 2px 1.5px var(--primary-shadow);
   text-align: center;
@@ -91,7 +92,7 @@ nav .is-hidden {
 }
 
 nav .fas {
-  font-size: 48px;
+  font-size: 4.8em;
   position: absolute;
   margin: var(--base-spacing);
   transform: translateX(calc(100vw - (var(--base-spacing) * 10)));
@@ -112,7 +113,7 @@ nav .fas {
 
 .hero-image a{
   background-color: var(--secondary);
-  font-size: 24px;
+  font-size: 2.4em;
   padding: var(--base-spacing);
   border-radius: var(--base-spacing);
 }
@@ -138,7 +139,7 @@ main {
   background-color: var(--secondary);
   text-align: center;
   color: var(--primary-text);
-  font-size: calc(var(--base-spacing) * 3);
+  font-size: 2.4em;
   line-height: calc(var(--base-spacing) * 4);
   text-shadow: 1px 1px var(--primary-shadow);
   box-shadow: 1px 1px var(--secondary-shadow);
@@ -162,7 +163,7 @@ section a {
   color: var(--primary-text);
   text-shadow: 1px 1px var(--primary-shadow);
   background-color: var(--secondary);
-  font-size: 16px;
+  font-size: 1.6em;
   border-radius: var(--base-spacing);
   box-shadow: 1px 1px var(--secondary-shadow);
 }
@@ -178,6 +179,7 @@ section p {
   text-align: center;
   width: 80%;
   padding: (var(--base-spacing) * 1.75);
+  font-size: 1.6em;
 }
 
 /* Footer style */
@@ -191,15 +193,30 @@ footer ul {
   display: flex;
   justify-content: space-around;
   padding: var(--base-spacing);
+  font-size: 2.4em;
 }
 
 
 /* Media queries */
 
+
+/* Tablet view */
 @media screen and ( min-width: 768px ) {
   section {
-    margin: 0;
-    width: 100%;
-    border-top: none;
+    margin: var(--base-spacing);
+    width: 90%;
+  }
+}
+
+
+/* Desktop view */
+@media screen and ( min-width: 1068px ) {
+  header {
+    flex-direction: row;
+    padding: calc( var(--base-spacing) * 2);
+  }
+
+  header figure {
+    margin-right: var(--base-spacing); 
   }
 }

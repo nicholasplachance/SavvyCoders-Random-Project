@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../style.css">
-  <title>Nick LaChance Practice Project Contact</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Nick LaChance Practice Project Contact</title>
+  </head>
+  <body>
     <header>
       <figure>
         <img
@@ -23,7 +23,7 @@
       </figure>
       <h1 class="header">Nick LaChance Practice Project</h1>
     </header>
-    <nav>
+    <nav class="contact-nav">
       <span class="fas fa-hamburger is-hidden--desktop"></span>
       <ul class="is-hidden--mobile show-on--desktop">
         <li><a href="../index.html">Home</a></li>
@@ -35,39 +35,38 @@
     </nav>
     <main>
       <form action="">
-          <div>
-              <label for="name">Name:</label>
-              <input type="text" name="name" id="name">
-            </div>
-    
-            <div>
-              <label for="email">Email</label>
-              <input type="email" name="" id="email">
-            </div>
-    
-            <div>
-              <label for="phone">Phone:</label>
-              <input type="tel" id="phone">
-            </div>
-    
-            <div>
-              <label for="msg">Enter your message:</label>
-              <textarea name="message" id="msg" cols="30" rows="10"></textarea>
-            </div>
+        <div class="flex-container--desktop flex-direction--row">
+          <div class="inputarea">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" class="is-error is-correct"/>
+          </div>
+          <div class="inputarea">
+            <label for="email">Email:</label>
+            <input type="email" name="" id="email" class="is-error is-correct"/>
+          </div>
+          <div class="inputarea">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" class="is-error is-correct"/>
+          </div>
+        </div>
+        <div class="textarea">
+          <label for="msg">Enter your message:</label>
+          <textarea name="message" id="msg" cols="30" rows="10"></textarea>
+        </div>
 
-            <input type="submit" value="Submit">
+        <input type="submit" value="Submit" />
       </form>
     </main>
     <footer>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about/">About</a></li>
-        <li><a href="./">Contact</a></li>
-        <li><a href="../blog/">Blog</a></li>
-        <li><a href="../gallery/">Gallery</a></li>
-      </ul>
-      &copy; 2019 Nick LaChance | All rights reserved.
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/">About</a></li>
+            <li><a href="../contact/">Contact</a></li>
+            <li><a href="../blog/">Blog</a></li>
+            <li><a href="../gallery/">Gallery</a></li>
+        </ul>
+      <p>&copy; 2019 Nick LaChance | All rights reserved.</p>
 
     </footer>
-</body>
+  </body>
 </html>

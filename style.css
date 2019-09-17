@@ -1,11 +1,11 @@
 :root {
-  --primary: #00157f;
+  --primary: #08605f;
   --primary-variant: #00072b;
   --primary-shadow: #111;
-  --secondary: #283333;
+  --secondary: #8a716a;
   --secondary-variant: #566666;
   --secondary-shadow: #fff;
-  --background: #7c9eb2;
+  --background: #ffe8d1;
   --error: #b00020;
   --primary-text: #fff;
   --secondary-text: #111;
@@ -69,7 +69,6 @@ header > h1 {
 /* Navigation style  */
 
 nav {
-  border: 3px solid var(--secondary-variant);
   border-top: none;
   position: relative;
   height: 0;
@@ -83,8 +82,8 @@ nav li a {
   font-size: 1.6em;
   padding: var(--base-spacing);
   text-align: center;
-  color: var(--primary-text);
-  text-shadow: 1px 1px var(--primary);
+  color: var(--secondary-variant);
+  text-shadow: 1px 1px var(--secondary-shadow);
 }
 
 nav .is-hidden--mobile {
@@ -206,15 +205,15 @@ footer ul {
 }
 
 footer ul li a {
-  color: var(--primary-text);
-  text-shadow: 1px 1px var(--primary);
+  color: var(--secondary-variant);
+  text-shadow: 1px 1px var(--secondary-shadow);
 }
 
 footer p {
   text-align: center;
-  font-size: 1.5em;
-  color: var(--primary-text);
-  text-shadow: 1px 1px var(--primary);
+  font-size: 1.6em;
+  color: var(--secondary-variant);
+  text-shadow: 1px 1px var(--secondary-shadow);
 }
 
 
@@ -258,8 +257,8 @@ label {
   justify-content: space-around;
   padding: var(--base-spacing);
   font-size: 1.6em;
-  color: var(--primary-text);
-  text-shadow: 1px 1px var(--primary);
+  color: var(--secondary-text);
+  text-shadow: 1px 1px var(--primary-variant);
 }
 
 input[type="submit"] {
@@ -273,7 +272,7 @@ input[type="submit"] {
 }
 
 .is-error {
-  border: 2.5px solid red;
+  border: 2.5px solid var(--error);
 }
 
 .is-correct {

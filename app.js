@@ -18,7 +18,7 @@ fakeButton.addEventListener("click", function() {
     fakeButton.innerHTML = `Hello ${greeter()}!`;
 })
 
-hamburgerIcon.addEventListener("click", function() {
+hamburgerIcon.addEventListener("click", ()=> {
     navUl.classList.toggle("is-hidden--mobile");
 })
 

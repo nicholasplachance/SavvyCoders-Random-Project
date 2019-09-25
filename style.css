@@ -85,6 +85,14 @@ nav li a {
   text-shadow: 1px 1px var(--secondary-shadow);
 }
 
+nav ul {
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: var(--base-spacing);
+  border-bottom: calc(var(--base-spacing) / 2) solid var(--primary-shadow);
+}
+
 nav li a:hover {
   font-size: 2em;
   font-weight: 800;
@@ -92,7 +100,6 @@ nav li a:hover {
 
 nav .is-hidden--mobile {
   margin: 0;
-  height: 0;
   opacity: 0;
 }
 
@@ -101,6 +108,11 @@ nav .fas {
   position: absolute;
   margin: var(--base-spacing);
   transform: translateX(calc(100vw - (var(--base-spacing) * 10)));
+  z-index: 2;
+}
+
+nav .fas:hover {
+  cursor: pointer;
 }
 
 /* Hero image style */

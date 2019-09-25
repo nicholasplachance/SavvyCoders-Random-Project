@@ -78,7 +78,7 @@ nav ul {
 }
 
 nav li a {
-  font-size: 1.6em;
+  font-size: 2em;
   padding: var(--base-spacing);
   text-align: center;
   color: var(--secondary-variant);
@@ -86,15 +86,20 @@ nav li a {
 }
 
 nav ul {
+  height: 20vh;
   margin: 0;
+  padding: calc(var(--base-spacing) * 5);
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: var(--base-spacing);
   border-bottom: calc(var(--base-spacing) / 2) solid var(--primary-shadow);
+  background: var(--background);
 }
 
 nav li a:hover {
-  font-size: 2em;
+  font-size: 2.4em;
   font-weight: 800;
 }
 

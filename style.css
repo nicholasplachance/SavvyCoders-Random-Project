@@ -96,6 +96,7 @@ nav ul {
   padding: var(--base-spacing);
   border-bottom: calc(var(--base-spacing) / 2) solid var(--primary-shadow);
   background: var(--background);
+  transition: ease 0.75s;
 }
 
 nav li a:hover {
@@ -104,8 +105,10 @@ nav li a:hover {
 }
 
 nav .is-hidden--mobile {
+  height: 0;
   margin: 0;
   opacity: 0;
+  z-index: -1;
 }
 
 nav .fas {

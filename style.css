@@ -85,6 +85,11 @@ nav li a {
   text-shadow: 1px 1px var(--secondary-shadow);
 }
 
+nav li a:hover {
+  font-size: 2em;
+  font-weight: 800;
+}
+
 nav .is-hidden--mobile {
   margin: 0;
   height: 0;
@@ -119,7 +124,9 @@ nav .fas {
 }
 
 .hero-image a:hover {
+  font-size: 2.75em;
   background-color: var(--secondary-variant);
+  cursor: pointer;
 }
 
 /* Main Section style */
@@ -200,12 +207,17 @@ footer ul {
   display: flex;
   justify-content: space-around;
   padding: var(--base-spacing);
-  font-size: 1.6em;
 }
 
 footer ul li a {
+  font-size: 1.6em;
   color: var(--secondary-variant);
   text-shadow: 1px 1px var(--secondary-shadow);
+}
+
+footer ul li a:hover {
+  font-size: 2em;
+  font-weight: 800;
 }
 
 footer p {
@@ -318,7 +330,7 @@ input[type="submit"] {
   }
 
   footer ul {
-    font-size: 2.4em;
+    font-size: 2.0em;
   }
 }
 

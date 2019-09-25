@@ -11,3 +11,4 @@ function greeter() {
 }
 
 fakeButton.addEventListener("click", greeter);
+

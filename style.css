@@ -104,7 +104,7 @@ nav .is-hidden--mobile {
 }
 
 nav .fas {
-  font-size: 4.8em;
+  font-size: 4.5em;
   position: absolute;
   margin: var(--base-spacing);
   transform: translateX(calc(100vw - (var(--base-spacing) * 10)));
@@ -113,6 +113,8 @@ nav .fas {
 
 nav .fas:hover {
   cursor: pointer;
+  color: #ddd;
+  font-size: 4.8em;
 }
 
 /* Hero image style */

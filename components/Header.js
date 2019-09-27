@@ -1,4 +1,5 @@
-export default `<header>
+export default function(heading = "I am default") {
+  return `<header>
 <figure>
   <img
     srcset="
@@ -11,5 +12,6 @@ export default `<header>
     alt="Lorem Picsum"
   />
 </figure>
-<h1 class="header">Nick LaChance Practice Project</h1>
+<h1 ${heading}</h1>
 </header>`;
+}

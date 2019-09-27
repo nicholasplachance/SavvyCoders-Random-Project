@@ -333,6 +333,7 @@ input[type="submit"] {
   nav ul {
     display: flex;
     justify-content: space-around;
+    flex-direction: row;
     padding: var(--base-spacing);
     border-bottom: calc(var(--base-spacing) / 2) solid var(--primary-shadow);
   }

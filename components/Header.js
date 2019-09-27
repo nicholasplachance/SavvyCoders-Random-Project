@@ -12,4 +12,4 @@ export default `<header>
   />
 </figure>
 <h1 class="header">Nick LaChance Practice Project</h1>
-</header>`
+</header>`;

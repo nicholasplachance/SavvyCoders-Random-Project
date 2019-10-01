@@ -1,4 +1,4 @@
-export default function(){
+export default function(credits = "2019 Nick LaChance"){
     return `<footer>
     <ul>
         <li><a href="../index.html">Home</a></li>
@@ -7,7 +7,7 @@ export default function(){
         <li><a href="../blog/">Blog</a></li>
         <li><a href="../gallery/">Gallery</a></li>
     </ul>
-    <p>&copy; 2019 Nick LaChance | All rights reserved.</p>
+    <p>&copy; ${credits}| All rights reserved.</p>
 
     </footer>`
 }

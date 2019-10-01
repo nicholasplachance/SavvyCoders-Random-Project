@@ -1,13 +1,14 @@
-import Header from "./components/Header.js";
-import Nav from "./components/Navigation.js";
-import Main from "./components/Main.js";
-import Footer from "./components/Footer.js";
+// index.js file inside ROOT DIRECTORY
+import { Header, Navigation, Main, Footer} from "./components"
 
-console.log(Header, Nav, Main, Footer);
+// import Header from "./components/Header.js";
+// import Nav from "./components/Navigation.js";
+// import Main from "./components/Main.js";
+// import Footer from "./components/Footer.js";
 
 document.querySelector("#root").innerHTML = `
-  ${Header(`class="header">Nick LaChance Practice Project`)}
-  ${Nav()}
+  ${Header()}
+  ${Navigation()}
   ${Main()}
   ${Footer()}
 `

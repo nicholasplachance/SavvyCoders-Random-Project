@@ -1,4 +1,4 @@
-export default function(heading = `class="header">Nick LaChance Practice Project`) {
+export default function(heading = `Nick LaChance Practice Project`) {
   return `<header>
 <figure>
   <img
@@ -12,6 +12,6 @@ export default function(heading = `class="header">Nick LaChance Practice Project
     alt="Lorem Picsum"
   />
 </figure>
-<h1 ${heading}</h1>
+<h1 class="header">${heading}</h1>
 </header>`;
 }

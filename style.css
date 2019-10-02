@@ -178,17 +178,13 @@ main {
 }
 
 section {
-  margin: var(--base-spacing) calc(var(--base-spacing) / 2);
-  width: calc(100% - calc(var(--base-spacing) * 2));
   background: var(--primary);
   color: var(--primary-text);
   text-shadow: 1px 1px var(--primary-shadow);
-  border: calc(var(--base-spacing) / 2) solid var(--primary-shadow);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  border-radius: var(--base-spacing);
 }
 
 section a {
@@ -317,8 +313,6 @@ input[type="submit"] {
 /* Tablet view */
 @media screen and (min-width: 768px) {
   section {
-    width: calc(100% - var(--base-spacing));
-    margin: var(--base-spacing) 0;
     flex-direction: column;
   }
 

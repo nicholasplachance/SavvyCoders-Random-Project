@@ -129,6 +129,9 @@ nav .fas:hover {
 
 .hero-image {
   background: url(https://picsum.photos/680/420) center center no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   height: 20vh;
   max-height: 420px;

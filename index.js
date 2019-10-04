@@ -5,19 +5,44 @@ import { Header, Navigation, Main, Footer } from "./components";
 // What page is currently selected or being currently displayed
 const state = {
   home: {
-    heading: "Home Page"
+    heading: "Home Page",
+    links: ["Home",
+    "About",
+    "Contact",
+    "Blog",
+    "Gallery"]
   },
   about: {
-    heading: "About Page"
+    heading: "About Page",
+    links: ["Home",
+    "About",
+    "Contact",
+    "Blog",
+    "Gallery"]
   },
   contact: {
-    heading: "Contact Page"
+    heading: "Contact Page",
+    links: ["Home",
+    "About",
+    "Contact",
+    "Blog",
+    "Gallery"]
   },
   blog: {
-    heading: "Blog Page"
+    heading: "Blog Page",
+    links: ["Home",
+    "About",
+    "Contact",
+    "Blog",
+    "Gallery"]
   },
   gallery: {
-    heading: "Gallery Page"
+    heading: "Gallery Page",
+    links: ["Home",
+    "About",
+    "Contact",
+    "Blog",
+    "Gallery"]
   }
 };
 
@@ -29,7 +54,7 @@ const state = {
 function renderState(st = state.home) {
   return (document.querySelector("#root").innerHTML = `
   ${Header(st.heading)}
-  ${Navigation()}
+  ${Navigation(st)}
   ${Main()}
   ${Footer()}
 `);
@@ -41,9 +66,9 @@ const links = document.querySelectorAll("nav a");
 // console.log(Array.from(links));
 
 for (let i = 0; i < links.length; i++) {
-  console.log(links[i].textContent);
   links[i].addEventListener("click", (event) => {
     event.preventDefault();
+    // Use bracket notation due to the target.textContent being a string
     renderState(state[event.target.textContent.toLowerCase()]);
   });
 }

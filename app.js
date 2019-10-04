@@ -21,6 +21,3 @@ fakeButton.addEventListener("click", function() {
 hamburgerIcon.addEventListener("click", ()=> {
     navUl.classList.toggle("is-hidden--mobile");
 })
-
-
-console.log(navUl);

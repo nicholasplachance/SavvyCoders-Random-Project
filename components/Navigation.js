@@ -1,4 +1,4 @@
-import { link } from "fs";
+import { Links } from "../store";
 
 function linksBuilder(links) {
   // Loop over links and dynamically create the list of links
@@ -15,7 +15,7 @@ export default function(st) {
   return `<nav>
   <span id="hamburger-icon" class="fas fa-hamburger is-hidden--desktop"></span>
   <ul class="is-hidden--mobile show-on--desktop">
-  ${linksBuilder(st.links)}
+  ${linksBuilder(Links)}
   </ul>
   </nav>`
 }

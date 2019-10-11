@@ -1,6 +1,7 @@
 // index.js file inside ROOT DIRECTORY
 import { Header, Navigation, Main, Footer } from "./components";
 import * as state from "./store";
+import { link } from "fs";
 
 console.log(state);
 
@@ -27,11 +28,7 @@ renderState();
 const links = document.querySelectorAll("nav a, footer a");
 // console.log(Array.from(links));
 
-for (let i = 0; i < links.length; i++) {
-  links[i].addEventListener("click", (event) => {
-    event.preventDefault();
-    renderState(state[event.target.textContent]);
-  });
-}
-
-//
+links.forEach(link => link.addEventListener("click", event => {
+  event.preventDefault();
+  renderState(state[event.target.textContent]);
+}));

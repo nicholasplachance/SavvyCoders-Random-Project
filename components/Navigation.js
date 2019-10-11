@@ -4,7 +4,7 @@ function linksBuilder(links) {
   // Loop over links and dynamically create the list of links
   // Using a template literal build out list item markup
 
-  return links.map(link => `<li><a href="./${link}">${link}</a></li>`).join(" ");
+  return links.map(link => `<li><a href="./${link}">${link}</a></li>`).join("");
 
 }
 

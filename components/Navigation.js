@@ -3,11 +3,9 @@ import { Links } from "../store";
 function linksBuilder(links) {
   // Loop over links and dynamically create the list of links
   // Using a template literal build out list item markup
-  let linksHTML = '';
-  for ( let i = 0; i < links.length; i++ ) {
-    linksHTML += `<li><a href="./">${links[i]}</a></li>`
-  }
-  return linksHTML;
+
+  return links.map(link => `<li><a href="./${link}">${link}</a></li>`).join(" ");
+
 }
 
 

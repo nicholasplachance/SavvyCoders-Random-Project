@@ -7,6 +7,17 @@ import { Header, Navigation, Main, Footer } from "./components";
 // Pulls everything from "./store", pulls generally
 import * as state from "./store";
 
+// Import node module: navigo
+import Navigo from "navigo";
+
+
+// The uppercase "N" for "Navigo" represents that it is a constructor function
+
+const router = new Navigo(location.origin);
+// console.log(Navigo);
+console.log(router);
+
+
 // console.log(state);
 
 // Use state to render the appropriate heading, depending on the 'state' of the app

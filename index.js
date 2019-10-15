@@ -15,7 +15,7 @@ import Navigo from "navigo";
 
 const router = new Navigo(location.origin);
 // console.log(Navigo);
-console.log(router);
+// console.log(router);
 
 
 
@@ -49,9 +49,13 @@ links.forEach(link => link.addEventListener("click", event => {
 
 router
   // Developer's Note: ':page' can be whatever you want to name the key that comes into `params` Object Literal
-  .on(":page", params => renderState(state[params.page]))
+  .on(":page", params =>
+    renderState(state[`${params.page.slice(0, 1).toUpperCase()}${params.page.slice(1).toLowerCase()}`])
+  )
   .on("/", renderState())
+  // TODO - Create a 404 page and route all bad routes to that page
   .resolve();
+
 
 
 // console.log(window.location.pathname)

@@ -1,9 +1,13 @@
 // index.js file inside ROOT DIRECTORY
-import { Header, Navigation, Main, Footer } from "./components";
-import * as state from "./store";
-import { link } from "fs";
 
-console.log(state);
+
+// Object destructing, it replaces dot-notation, and pulls specifically
+import { Header, Navigation, Main, Footer } from "./components";
+
+// Pulls everything from "./store", pulls generally
+import * as state from "./store";
+
+// console.log(state);
 
 // Use state to render the appropriate heading, depending on the 'state' of the app
 // What page is currently selected or being currently displayed
@@ -14,21 +18,20 @@ console.log(state);
 // import Main from "./components/Main.js";
 // import Footer from "./components/Footer.js";
 
-function renderState(st = state.Home) {
-  return (document.querySelector("#root").innerHTML = `
+function renderState(event, st = state.Home) {
+  (document.querySelector("#root").innerHTML = `
   ${Header(st)}
   ${Navigation()}
-  ${Main()}
+  ${Main(st)}
   ${Footer()}
 `);
-}
-
-renderState();
-
 const links = document.querySelectorAll("nav a, footer a");
 // console.log(Array.from(links));
 
 links.forEach(link => link.addEventListener("click", event => {
   event.preventDefault();
-  renderState(state[event.target.textContent]);
+  renderState(state, state[event.target.textContent]);
 }));
+}
+
+renderState();

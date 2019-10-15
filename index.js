@@ -18,6 +18,7 @@ const router = new Navigo(location.origin);
 console.log(router);
 
 
+
 // console.log(state);
 
 // Use state to render the appropriate heading, depending on the 'state' of the app
@@ -46,9 +47,13 @@ links.forEach(link => link.addEventListener("click", event => {
 
 }
 
+router
+  // Developer's Note: ':page' can be whatever you want to name the key that comes into `params` Object Literal
+  .on(":page", params => renderState(state[params.page]))
+  .on("/", renderState())
+  .resolve();
 
 
-console.log(window.location.pathname)
-console.log(location.pathname.slice(1));
+// console.log(window.location.pathname)
+// console.log(location.pathname.slice(1));
 
-renderState();

@@ -18,7 +18,7 @@ import * as state from "./store";
 // import Main from "./components/Main.js";
 // import Footer from "./components/Footer.js";
 
-function renderState(event, st = state.Home) {
+function renderState(st = state.Home) {
   (document.querySelector("#root").innerHTML = `
   ${Header(st)}
   ${Navigation()}
@@ -30,8 +30,14 @@ const links = document.querySelectorAll("nav a, footer a");
 
 links.forEach(link => link.addEventListener("click", event => {
   event.preventDefault();
-  renderState(state, state[event.target.textContent]);
+  renderState(state[event.target.textContent]);
 }));
+
 }
+
+
+
+console.log(window.location.pathname)
+console.log(location.pathname.slice(1));
 
 renderState();

@@ -37,13 +37,7 @@ function renderState(st = state.Home) {
   ${Main(st)}
   ${Footer()}
 `);
-const links = document.querySelectorAll("nav a, footer a");
-// console.log(Array.from(links));
-
-links.forEach(link => link.addEventListener("click", event => {
-  event.preventDefault();
-  renderState(state[event.target.textContent]);
-}));
+  router.updatePageLinks();
 
 }
 

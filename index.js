@@ -11,6 +11,12 @@ import * as state from "./store";
 import Navigo from "navigo";
 import axios from "axios"
 console.log(axios)
+
+axios
+  .get("https://jsonplaceholder.typicode.com/posts")
+  .then(response => console.log(response.data));
+
+
 // The uppercase "N" for "Navigo" represents that it is a constructor function
 
 const router = new Navigo(location.origin);
@@ -56,4 +62,6 @@ router
   .resolve();
 // console.log(window.location.pathname)
 // console.log(location.pathname.slice(1));
+
+
 

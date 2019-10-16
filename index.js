@@ -15,8 +15,16 @@ console.log(axios)
 axios
   .get("https://jsonplaceholder.typicode.com/posts")
   .then(response => {
-    state.Blog.main = response.data;
-    console.log(state.Blog);
+    // TODO: Using response.data[0]
+    const data = response.data;
+    data.forEach( element => {
+      console.log(element);
+      state.Blog.main += `<article>
+      <h2>${element.title}</h2>
+      <p>${element.body}</p>
+      </article>`
+    })
+    console.log(state.Blog.main)
   });
 
 

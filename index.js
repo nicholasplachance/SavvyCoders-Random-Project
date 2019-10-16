@@ -14,7 +14,10 @@ console.log(axios)
 
 axios
   .get("https://jsonplaceholder.typicode.com/posts")
-  .then(response => console.log(response.data));
+  .then(response => {
+    state.Blog.main = response.data;
+    console.log(state.Blog);
+  });
 
 
 // The uppercase "N" for "Navigo" represents that it is a constructor function

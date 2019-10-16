@@ -9,8 +9,8 @@ import * as state from "./store";
 
 // Import node module: navigo
 import Navigo from "navigo";
-
-
+import axios from "axios"
+console.log(axios)
 // The uppercase "N" for "Navigo" represents that it is a constructor function
 
 const router = new Navigo(location.origin);
@@ -38,6 +38,11 @@ function renderState(st = state.Home) {
   ${Footer()}
 `);
   router.updatePageLinks();
+  const navUl = document.querySelector("nav ul");
+  const hamburgerIcon = document.querySelector("#hamburger-icon");
+  hamburgerIcon.addEventListener("click", ()=> {
+    navUl.classList.toggle("is-hidden--mobile");
+  })
 
 }
 
@@ -49,9 +54,6 @@ router
   .on("/", renderState())
   // TODO - Create a 404 page and route all bad routes to that page
   .resolve();
-
-
-
 // console.log(window.location.pathname)
 // console.log(location.pathname.slice(1));
 

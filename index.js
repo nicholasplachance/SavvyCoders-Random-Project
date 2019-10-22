@@ -12,7 +12,11 @@ import Navigo from "navigo";
 import axios from "axios"
 import { capitalize } from "lodash"
 
-console.log(capitalize);
+
+// Import firebase db
+import { db } from "./firebase"
+
+console.log(db)
 
 axios
   .get("https://jsonplaceholder.typicode.com/posts")
@@ -25,9 +29,7 @@ axios
       </article>`
   ).join("")
 
-  console.log(router.lastRouteResolved())
-
-  if (capitalize(router.lastRouteResolved().params.page) === "Blog") {
+  if ( router.lastRouteResolved().params && capitalize(router.lastRouteResolved().params.page) === "Blog") {
     renderState(state.Blog)
   }
 

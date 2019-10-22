@@ -311,6 +311,23 @@ input[type="submit"] {
   border: 2.5px solid green;
 }
 
+article {
+  margin: var(--base-spacing);
+  width: 90vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--primary-text);
+  text-shadow: 1px 1px var(--primary-shadow);
+  background: var(--secondary-variant);
+}
+
+article p {
+  font-size: 1.6em;
+  width: 80vw;
+}
+
 /* Media queries */
 
 /* Tablet view */

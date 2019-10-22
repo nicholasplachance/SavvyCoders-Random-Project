@@ -10,21 +10,27 @@ import * as state from "./store";
 // Import node module: navigo
 import Navigo from "navigo";
 import axios from "axios"
-console.log(axios)
+import { capitalize } from "lodash"
+
+console.log(capitalize);
 
 axios
   .get("https://jsonplaceholder.typicode.com/posts")
   .then(response => {
     // TODO: Using response.data[0]
-    const data = response.data;
-    data.forEach( element => {
-      console.log(element);
-      state.Blog.main += `<article>
-      <h2>${element.title}</h2>
-      <p>${element.body}</p>
+    state.Blog.main += response.data.map(({title, body})=>
+      `<article>
+      <h2 class="sub-header">${title}</h2>
+      <p>${body}</p>
       </article>`
-    })
-    console.log(state.Blog.main)
+  ).join("")
+
+  console.log(router.lastRouteResolved())
+
+  if (capitalize(router.lastRouteResolved().params.page) === "Blog") {
+    renderState(state.Blog)
+  }
+
   });
 
 
@@ -66,9 +72,9 @@ function renderState(st = state.Home) {
 router
   // Developer's Note: ':page' can be whatever you want to name the key that comes into `params` Object Literal
   .on(":page", params =>
-    renderState(state[`${params.page.slice(0, 1).toUpperCase()}${params.page.slice(1).toLowerCase()}`])
+    renderState(state[capitalize(params.page)])
   )
-  .on("/", renderState())
+  .on("/", () => renderState())
   // TODO - Create a 404 page and route all bad routes to that page
   .resolve();
 // console.log(window.location.pathname)

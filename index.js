@@ -14,7 +14,9 @@ import { capitalize } from "lodash"
 
 
 // Import firebase db
-import { db } from "./firebase"
+import { auth, db } from "./firebase"
+
+console.log(auth);
 
 console.log(db)
 

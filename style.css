@@ -99,10 +99,6 @@ nav ul {
   transition: ease 0.75s;
 }
 
-nav li a:hover {
-  font-size: 2.4em;
-  font-weight: 800;
-}
 
 nav .is-hidden--mobile {
   height: 0;

@@ -319,6 +319,46 @@ article {
   background: var(--secondary-variant);
 }
 
+
+/* gallery */
+
+.gallery {
+  display: grid;
+  grid-gap: calc(var(--base-spacing) * 2);
+  grid-template-columns: repeat(3, 320px);
+  grid-template-rows: repeat(5, 550px);
+  justify-content: center;
+  padding: calc(var(--base-spacing) * 2);
+  max-width: 1200px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  margin: var(--base-spacing) auto;
+  width: 80vw;
+}
+
+.gallery figure {
+  margin: var(--base-spacing) 0;
+}
+
+figure,
+video {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+figcaption {
+  background: var(--secondary-variant);
+  margin: var(--base-spacing) 0;
+  text-align: center;
+  font-size: 2em;
+  color: var(--primary-text);
+  text-shadow: 1px 1px var(--primary-shadow);
+}
+
 article p {
   font-size: 1.6em;
   width: 80vw;

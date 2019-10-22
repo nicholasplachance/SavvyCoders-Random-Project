@@ -84,3 +84,40 @@ router
 
 
 
+// Gallery
+// Access database connector to firebase and tell it the name of the collection
+db.collection("pictures")
+  .get()
+  // Handle the promise returned with "then"
+  // querySnapshots is an array
+  .then(querySnapshots => {
+    state.Gallery.main +=
+    // Template literal + concatenation to create everything rendered inside the "gallery div" vs rendering a "gallery div" for each image
+      `<div class="gallery">` +
+      querySnapshots.docs
+        .map(doc => {
+          // Combine const with object destructuring to create 3 variable from the keys in our object literal
+          const { caption, credit, imgURL } = doc.data();
+
+          return `
+        <figure>
+          <img src="${imgURL}" alt="">
+          <figcaption>${caption} - ${credit}</figcaption>
+        </figure>
+      `;
+        })
+        .join(" ") +
+      `</div>`;
+
+    if (
+      router.lastRouteResolved().params &&
+      capitalize(router.lastRouteResolved().params.page) === "Gallery"
+    ) {
+      renderState(state.Gallery);
+    }
+  })
+  .catch(err => console.error("Error loading pics", err));
+
+
+
+

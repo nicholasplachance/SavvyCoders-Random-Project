@@ -1,7 +1,6 @@
 export default {
   heading: "Contact Page",
   main: `<main><div class="hero-image">
-  <a href="#" id="fake-cta--button">Click To Enter Your Name</a>
 </div>
 <form action="#" method="POST" data-netlify="true">
   <div class="flex-container--desktop flex-direction--row">

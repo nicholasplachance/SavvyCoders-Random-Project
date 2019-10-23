@@ -1,7 +1,6 @@
 export default {
   heading: "Home Page",
   main: `<div class="hero-image">
-  <a href="#" id="fake-cta--button">Click To Enter Your Name</a>
 </div>
 <div class="flex-container--mobile flex-container--desktop">
   <section>

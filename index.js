@@ -122,4 +122,78 @@ db.collection("pictures")
 
 
 
+// Admin
 
+// TODO: Rather than grabbing each element manually, consider using (`event.target.elements`) on the `submit` event.
+// Are we on Admin page?
+if (
+  router.lastRouteResolved().params &&
+  capitalize(router.lastRouteResolved().params.page) === "Admin"
+) {
+  // Are we logged in?
+  auth.onAuthStateChanged(user => {
+    console.log(user);
+    if (user) {
+      // We are logged in!
+      console.log("you are logged in!");
+      state.Admin.main = `<div class="hero-image">
+      </div><button type="button">Log out!</button>`;
+
+      renderState(state.Admin);
+
+      document.querySelector("button").addEventListener("click", () => {
+        auth
+          .signOut()
+          .then(() => {
+            state.Admin.main = `
+            <div class="hero-image">
+          </div>
+          <div class="flex-container--desktop flex-direction--row"></div>
+              <form>
+                <div class="inputarea">
+                <label for="name">User Name:</label>
+                  <input type="email" />
+                </div>
+                <div class="inputarea">
+                <label for="email">Password:</label>
+                  <input type="password" />
+                </div>
+                <input id="login" type="submit" value="Log in!" />
+              </form>
+            `;
+
+          renderState(state.Admin);
+          })
+          .catch(err => console.log("Error signing out", err.message));
+      });
+    } else {
+      const email = document.querySelector('[type="email"]');
+      const password = document.querySelector('[type="password"]');
+
+      document.querySelector("form").addEventListener("submit", e => {
+        e.preventDefault();
+
+        auth
+          .signInWithEmailAndPassword(email.value, password.value)
+          .catch(err => console.error("Got an error", err.message));
+      });
+    }
+  });
+}
+
+
+
+
+// Test pulling information from firebase database
+
+
+// db.collection("superheroMovies")
+//   .get()
+//   .then(querySnapshots => {
+//     querySnapshots.docs
+//       .map(doc => {
+//         const { moviePublisher, movieTitle, imdbID } = doc.data();
+
+//         console.log(moviePublisher, movieTitle, imdbID)
+//       })
+//   })

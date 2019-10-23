@@ -273,6 +273,8 @@ input,
 textarea {
   border: solid thin var(--primary);
   max-width: 80vw;
+  margin: var(--base-spacing);
+  font-size: 2em;
 }
 
 .inputarea {
@@ -283,7 +285,7 @@ label {
   margin: 0;
   display: flex;
   justify-content: space-around;
-  padding: var(--base-spacing);
+  padding: calc(var(--base-spacing) / 2);
   font-size: 1.6em;
   color: var(--secondary-text);
   text-shadow: 1px 1px var(--primary-variant);

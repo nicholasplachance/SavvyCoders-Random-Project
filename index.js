@@ -87,18 +87,16 @@ router
 
 
 // Gallery
-// Access database connector to firebase and tell it the name of the collection
 db.collection("pictures")
   .get()
-  // Handle the promise returned with "then"
-  // querySnapshots is an array
   .then(querySnapshots => {
+
+    // Let's make sure to update instead of overwriting our markup
     state.Gallery.main +=
-    // Template literal + concatenation to create everything rendered inside the "gallery div" vs rendering a "gallery div" for each image
       `<div class="gallery">` +
       querySnapshots.docs
         .map(doc => {
-          // Combine const with object destructuring to create 3 variable from the keys in our object literal
+          // Combine `const` with destructuring to create 3 variables from the keys in our object literal
           const { caption, credit, imgURL } = doc.data();
 
           return `
@@ -116,6 +114,27 @@ db.collection("pictures")
       capitalize(router.lastRouteResolved().params.page) === "Gallery"
     ) {
       renderState(state.Gallery);
+
+      const imgURL = document.querySelector("#imgURL");
+      const caption = document.querySelector("#caption");
+      const credit = document.querySelector("#credit");
+
+      document.querySelector("form").addEventListener("submit", e => {
+        e.preventDefault();
+
+        db.collection("pictures")
+          .add({
+            imgURL: imgURL.value,
+            caption: caption.value,
+            credit: credit.value
+          })
+          .then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+          })
+          .catch(function(error) {
+            console.error("Error adding document: ", error);
+          });
+      });
     }
   })
   .catch(err => console.error("Error loading pics", err));
